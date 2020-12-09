@@ -1,0 +1,14 @@
+{
+  "Scenario": "To do list",
+  "SetStateTo": "TodoList State Started",
+  "Request": {
+    "Path": "/todo/items",
+    "Methods": [
+      "get"
+    ]
+  },
+  "Response": {
+    "StatusCode": 200,
+    "Body": "Buy milk"
+  }
+}

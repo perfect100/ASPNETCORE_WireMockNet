@@ -1,0 +1,13 @@
+{
+  "Scenario": "To do list",
+  "WhenStateIs": "Cancel newspaper item added",
+  "Request": {
+    "Path": "/todo/items",
+    "Methods": [
+      "get"
+    ]
+  },
+  "Response": {
+    "Body": "Buy milk;Cancel newspaper subscription"
+  }
+}

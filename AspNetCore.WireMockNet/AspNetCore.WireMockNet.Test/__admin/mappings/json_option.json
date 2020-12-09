@@ -1,0 +1,35 @@
+{
+  "Request": {
+    "Path": {
+      "Matchers": [
+        {
+          "Name": "ExactMatcher",
+          "Pattern": "/exact"
+        }
+      ]
+    },
+    "Params": [
+      {
+        "Name": "from",
+        "Matchers": [
+          {
+            "Name": "ExactMatcher",
+            "Pattern": "abc"
+          }
+        ]
+      },
+      {
+        "Name": "to",
+        "Matchers": [
+          {
+            "Name": "ExactMatcher",
+            "Pattern": "def"
+          }
+        ]
+      }
+    ]
+  },
+  "Response": {
+    "Body": "Exact match"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "Guid": "dae02a0d-8a33-46ed-aab0-afbecc8643e3",
+  "Request": {
+    "Path": "/testabc",
+    "Methods": [
+      "put"
+    ],
+    "Headers": [
+      {
+        "Name": "Content-Type",
+        "Matchers": [
+          {
+            "Name": "WildcardMatcher",
+            "Pattern": "application/*"
+          }
+        ]
+      }
+    ],
+    "Cookies": [],
+    "Params": [
+      {
+        "Name": "start",
+        "Values": [ "1000", "1001" ]
+      }
+    ],
+    "Body": {
+      "Matcher": {
+        "Name": "JsonPathMatcher",
+        "Pattern": "$.things[?(@.name == 'RequiredThing')]"
+      }
+    }
+  },
+  "Response": {
+    "UseTransformer": true,
+    "StatusCode": 205,
+    "BodyAsJson": { "result": "test - {{request.path}}" },
+    "Headers": {
+      "Content-Type": "application/json", "a" : "b"
+    },
+    "Delay": 10
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "Scenario": "To do list",
+  "SetStateTo": "Cancel newspaper item added",
+  "WhenStateIs": "TodoList State Started",
+  "Request": {
+    "Path": "/todo/items",
+    "Methods": [
+      "post"
+    ]
+  },
+  "Response": {
+    "StatusCode": 201
+  }
+}
